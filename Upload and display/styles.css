@@ -1,0 +1,130 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+}
+
+h1 {
+    color: #1877f2;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.post {
+    background-color: #f5f8fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.title {
+    color: #1877f2;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.description {
+    color: #1c1e21;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-transform: capitalize;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.description:hover {
+    transform: scale(1.05);
+    color: #1877f2;
+}
+
+.image-container,
+.video-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s, border 0.2s;
+    border: 2px solid transparent;
+}
+
+.image-container img,
+.video-container video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.image-container:hover,
+.video-container:hover {
+    transform: scale(1.05);
+    border-color: #1877f2;
+}
+
+.post hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.no-files {
+    color: #8d949e;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
